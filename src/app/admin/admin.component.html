@@ -1,0 +1,37 @@
+<!--
+<input type="text" [(ngModel)]="cId">-->
+<!--<input type="text" [(ngModel)]="cFirstname">
+<input type="text" [(ngModel)]="cLastname">
+<input type="text" [(ngModel)]="cEmail">
+<input type="text" [(ngModel)]="cAddress">
+<button (click)="addCheckout()">Add Checkout</button> -->
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    
+    <tbody class="table-group-divider" *ngFor="let checkout of checkouts">
+      <tr>
+        <td scope="row">{{ checkout.firstname }}</td>
+        <td>{{ checkout.lastname }}</td>
+        <td>{{ checkout.email }}</td>
+        <td>{{ checkout.address }}</td>
+        <td>
+          <div class="actions">
+            <span class="edit-btn">Edit</span>
+            <span class="delete-btn">Delete</span>
+            <span class="update-btn">Update</span>
+          </div>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
